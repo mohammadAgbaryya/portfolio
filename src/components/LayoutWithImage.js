@@ -6,6 +6,12 @@ const LayoutContainer = styled.div`
   display: flex;
   height: 100vh;
   perspective: 1000px; /* Add perspective */
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto; /* Allow the container to expand for content */
+  }
 `;
 
 const TextContainer = styled.div`
@@ -15,6 +21,11 @@ const TextContainer = styled.div`
   justify-content: center;
   padding: 20px;
   text-align: right;
+  @media (max-width: 768px) {
+    text-align: center;
+    padding: 10px;
+    width: 100%; /* Ensure full width */
+  }
 `;
 
 const PhotoWrapper = styled.div`
@@ -23,6 +34,11 @@ const PhotoWrapper = styled.div`
   position: relative;
   border-radius: 0 50% 50% 0;
   overflow: hidden; /* Ensure children don't overflow */
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+    border-radius: 50% 50% 0 0;
+  }
 `;
 
 const PhotoContainer = styled(animated.div)`
@@ -42,6 +58,18 @@ const PhotoContainer = styled(animated.div)`
     transform: rotateY(-10deg) scale(1.05); /* Slightly scale on hover */
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5); /* Increase shadow on hover */
   }
+
+  @media (max-width: 768px) {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Set a fixed height for smaller screens */
+    border-radius: 50% 50% 0 0;
+    transform: none;
+    &:hover {
+      transform: none;
+      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3); /* Maintain shadow */
+    }
+  }
 `;
 
 const Paragraph = styled.p`
@@ -50,6 +78,10 @@ const Paragraph = styled.p`
   margin: 0; /* Remove default margins */
   padding: 0 28px;
   text-align: justify;
+  @media (max-width: 768px) {
+    font-size: 20px;
+    padding: 0 10px;
+  }
 `;
 
 const Signature = styled.p`
@@ -58,6 +90,10 @@ const Signature = styled.p`
   font-style: italic;
   line-height: 2.5;
   font-family: 'Playwrite IN', cursive;
+  @media (max-width: 768px) {
+    text-align: center;
+    line-height: 2;
+  }
 `;
 
 const LayoutWithImage = ({ photoUrls, text, signature }) => {
