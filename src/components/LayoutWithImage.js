@@ -37,7 +37,7 @@ const PhotoWrapper = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     height: auto;
-    border-radius: 50% 50% 0 0;
+    border-radius: 0;
   }
 `;
 
@@ -63,7 +63,7 @@ const PhotoContainer = styled(animated.div)`
     position: relative;
     width: 100%;
     height: 300px; /* Set a fixed height for smaller screens */
-    border-radius: 50% 50% 0 0;
+    border-radius: 0;
     transform: none;
     &:hover {
       transform: none;
