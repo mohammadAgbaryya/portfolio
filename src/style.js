@@ -12,12 +12,18 @@ export const THEME = {
   dark: {},
 };
 
-// const fontImports = css`
+// const arabicFonts = css`
 //   @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
 //   @import url('https://fonts.googleapis.com/css2?family=Mada:wght@200..900&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap');
 // `;
 
+const englishFonts = css`
+  @import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Mate+SC&family=Playwrite+BE+WAL:wght@100..400&display=swap');
+`;
+
 export default css`
+  ${englishFonts}
+
   * {
     margin: 0;
     padding: 0;
@@ -26,6 +32,7 @@ export default css`
 
   body {
     color: ${THEME.light.text.secondary};
-    padding: ${THEME.padding.main}px;
+    font-family: 'Baskervville SC', cursive;
+    font-optical-sizing: auto;
   }
 `;
