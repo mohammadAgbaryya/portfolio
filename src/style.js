@@ -17,12 +17,9 @@ export const THEME = {
 //   @import url('https://fonts.googleapis.com/css2?family=Mada:wght@200..900&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap');
 // `;
 
-const englishFonts = css`
-  @import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Mate+SC&family=Playwrite+BE+WAL:wght@100..400&display=swap');
-`;
-
 export default css`
-  ${englishFonts}
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap');
 
   * {
     margin: 0;
@@ -32,7 +29,7 @@ export default css`
 
   body {
     color: ${THEME.light.text.secondary};
-    font-family: 'Baskervville SC', cursive;
     font-optical-sizing: auto;
+    font-family: 'Cormorant Garamond', serif;
   }
 `;

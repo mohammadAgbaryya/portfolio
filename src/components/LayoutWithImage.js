@@ -56,7 +56,8 @@ const Signature = styled.p`
   font-size: 20px;
   text-align: right;
   font-style: italic;
-  font-family: 'Caveat';
+  line-height: 2.5;
+  font-family: 'Playwrite IN', cursive;
 `;
 
 const LayoutWithImage = ({ photoUrls, text, signature }) => {
