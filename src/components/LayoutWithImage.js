@@ -87,12 +87,10 @@ const Paragraph = styled.p`
 const Signature = styled.p`
   font-size: 20px;
   text-align: right;
-  font-style: italic;
   line-height: 2.5;
-  font-family: 'Playwrite IN', cursive;
+  font-family: inherit;
   @media (max-width: 768px) {
-    text-align: center;
-    line-height: 2;
+    display: none;
   }
 `;
 
