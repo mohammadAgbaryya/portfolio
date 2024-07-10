@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "My portfolio",
   "main": "index.js",
-  "homepage": "https://mohammadAgbaryya.github.io/cv",
   "scripts": {
     "watch": "webpack-dev-server --mode development --open",
     "build": "webpack --config webpack.config.js",
