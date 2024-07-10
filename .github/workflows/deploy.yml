@@ -25,14 +25,8 @@ jobs:
         run: yarn build
 
       - name: Deploy
-        run: |
-          git config --global user.email 'github-actions@github.com'
-          git config --global user.name 'github-actions'
-          git remote set-url origin https://${{ secrets.PAT }}@github.com/mohammadAgbaryya/cv.git
-          git fetch origin
-          git checkout gh-pages || git checkout --orphan gh-pages
-          git rm -rf .
-          cp -r ../dist/* .
-          git add .
-          git commit -m "Deploy to GitHub Pages"
-          git push -f origin gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: dist
+          token: ${{ secrets.GITHUB_TOKEN }}
