@@ -76,11 +76,11 @@ const Paragraph = styled.p`
   font-size: 24px; /* Make the font size larger */
   line-height: 1.8; /* Improve readability with line height */
   margin: 0; /* Remove default margins */
-  padding: 0 28px;
+  padding: 28px;
   text-align: justify;
   @media (max-width: 768px) {
     font-size: 20px;
-    padding: 0 10px;
+    padding: 10px;
   }
 `;
 
