@@ -28,7 +28,7 @@ jobs:
         run: |
           git config --global user.email 'github-actions@github.com'
           git config --global user.name 'github-actions'
-          git remote set-url origin https://${{ secrets.PAT }}@github.com/Mahmoud-IG/portfolio.git
+          git remote set-url origin https://${{ secrets.PAT }}@github.com/mohammadAgbaryya/cv.git
           git checkout --orphan gh-pages
           git rm -rf .
           cp -r dist/* .
